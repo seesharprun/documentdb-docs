@@ -2,8 +2,8 @@
 
 DocumentDB provides PostgreSQL compatibility, allowing you to use PostgreSQL tools and drivers to interact with DocumentDB.
 
-# Potentail Pages...
-
+# Potential Pages...
+---
 ## Features
 
 - [PostgreSQL Wire Protocol Support](wire-protocol.md)
