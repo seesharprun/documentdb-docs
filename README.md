@@ -1,6 +1,6 @@
 # DocumentDB Documentation
 
-Welcome to the official documentation for [DocumentDB](https://github.com/documentdb/documentdb). This repository contains comprehensive documentation covering everything from getting started guides to detailed API references and architectural insights.
+Welcome to the official documentation for [DocumentDB](https://github.com/documentdb/documentdb).
 
 ## Documentation Sections
 
