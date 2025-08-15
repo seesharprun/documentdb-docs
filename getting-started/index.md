@@ -56,7 +56,7 @@ Choose the getting started guide that best fits your needs:
 - [VS Code Extension Guide](vscode-extension-guide.md) - Comprehensive guide to the VS Code extension
 
 ### Migration Guides
-- [MongoDB to DocumentDB Migration](mongodb-migration-guide.md) - Migrate from MongoDB to DocumentDB
+- [MongoDB to DocumentDB Migration](mongodb-migration.md) - Migrate from MongoDB to DocumentDB
 
 ### Language-Specific Guides
 - [Python Setup Guide](python-setup.md) - Using DocumentDB with Python applications
