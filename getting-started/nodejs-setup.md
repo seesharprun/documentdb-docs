@@ -7,9 +7,10 @@ Learn how to set up and use DocumentDB with Node.js using the official MongoDB N
 - Node.js 14.x or later
 - npm or yarn package manager
 - DocumentDB installed and running
+- Docker installed (if set up is not completed yet)
 - Basic Node.js knowledge
 
-## Setting up DocumentDB with Docker
+## Project Setup (skip if already done)
 
 Before connecting from Node.js, make sure you have a running DocumentDB instance using Docker:
 
