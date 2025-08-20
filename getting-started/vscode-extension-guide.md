@@ -156,7 +156,7 @@ db.sales.aggregate([
   "name": "John Doe",
   "email": "john@example.com",
   "age": 30,
-  "created_at": new Date(),
+  "created_at": new Date(2024-11-16),
   "tags": ["user", "active"]
 }
 ```
