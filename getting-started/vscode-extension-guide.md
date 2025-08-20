@@ -25,7 +25,8 @@ DocumentDB for VS Code provides a developer-centric experience with minimal setu
 
 ### Prerequisites
 
-- Visual Studio Code installed
+- [Visual Studio Code](https://code.visualstudio.com/) installed
+- [Docker Desktop](https://www.docker.com/products/docker-desktop) (for running local DocumentDB instances)
 - Basic familiarity with document databases
 - MongoDB Shell (optional, for advanced commands)
 
@@ -45,6 +46,28 @@ Use the command palette:
 3. Press Enter
 
 ## Getting Started
+
+### Setting Up a Local DocumentDB Instance
+
+1. **Start a local DocumentDB instance using Docker:**
+
+   ```bash
+   docker pull ghcr.io/microsoft/documentdb/documentdb-local:latest
+   docker tag ghcr.io/microsoft/documentdb/documentdb-local:latest documentdb
+   docker run -dt -p 10260:10260 --name documentdb-container documentdb --username admin --password password123
+   docker image rm -f ghcr.io/microsoft/documentdb/documentdb-local:latest || echo "No existing documentdb image to remove"
+   ```
+
+   > **Note:** We're using port `10260` to avoid conflicts with other local database services. You can use port `27017` (the standard MongoDB port) if you prefer.
+
+2. **Connect to DocumentDB using the VS Code extension:**
+   - Open VS Code and click the DocumentDB icon in the sidebar
+   - Click "Add New Connection"
+   - Select "Connection String" and paste:
+     ```
+     mongodb://admin:password123@localhost:10260/?tls=true&tlsAllowInvalidCertificates=true&authMechanism=SCRAM-SHA-256
+     ```
+   - Click "Enter" when prompted for your username and password
 
 ### Setting Up Your First Connection
 
