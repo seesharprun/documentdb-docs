@@ -47,8 +47,6 @@ Use the command palette:
 
 ## Getting Started
 
-### Setting Up a Local DocumentDB Instance
-
 1. **Start a local DocumentDB instance using Docker:**
 
    ```bash
@@ -68,38 +66,6 @@ Use the command palette:
      mongodb://admin:password123@localhost:10260/?tls=true&tlsAllowInvalidCertificates=true&authMechanism=SCRAM-SHA-256
      ```
    - Click "Enter" when prompted for your username and password
-
-### Setting Up Your First Connection
-
-1. **Open the DocumentDB Extension**
-   - Click the DocumentDB icon in the VS Code sidebar
-   - Click "Add New Connection"
-
-2. **Choose Connection Method**
-   - **Connection String**: Paste your MongoDB/DocumentDB connection string
-   - **Browse Cloud Providers**: Connect through your cloud provider's interface
-
-3. **Connection String Format**
-   ```
-   mongodb://username:password@host:port/database?authMechanism=SCRAM-SHA-256
-   ```
-
-### Example Connections
-
-#### Local DocumentDB Instance
-```
-mongodb://username:password@localhost:10260/?authMechanism=SCRAM-SHA-256
-```
-
-#### MongoDB Atlas
-```
-mongodb+srv://username:password@cluster.mongodb.net/database?retryWrites=true&w=majority
-```
-
-#### Azure DocumentDB
-```
-mongodb://username:password@account.documents.azure.com:10255/database?ssl=true&replicaSet=globaldb
-```
 
 ## Core Features
 
