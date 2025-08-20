@@ -50,7 +50,7 @@ Learn how to set up and use DocumentDB with Python using the official MongoDB Py
 
    # Create a MongoDB client and open a connection to DocumentDB
    client = pymongo.MongoClient(
-       'mongodb://localhost:27017'
+       'mongodb://localhost:10260'
    )
 
    # Specify the database to be used
@@ -64,7 +64,7 @@ Learn how to set up and use DocumentDB with Python using the official MongoDB Py
    ```python
    # With username and password
    client = pymongo.MongoClient(
-       'mongodb://username:password@localhost:27017'
+       'mongodb://username:password@localhost:10260'
    )
    ```
 
@@ -72,7 +72,7 @@ Learn how to set up and use DocumentDB with Python using the official MongoDB Py
    ```python
    # With additional options
    client = pymongo.MongoClient(
-       'mongodb://localhost:27017',
+       'mongodb://localhost:10260',
        maxPoolSize=50,
        retryWrites=False,
        w='majority'
