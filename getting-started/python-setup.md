@@ -7,7 +7,7 @@ Learn how to set up and use DocumentDB with Python using the official MongoDB Py
 - Python 3.7+
 - pip package manager
 - DocumentDB installed and running (see [Pre-built Packages](prebuilt-packages.md))
-- Basic Python knowledge
+- Docker (if DocumentDB is not set up yet)
 - Git installed (for cloning the repository)
 
 ## Installation
