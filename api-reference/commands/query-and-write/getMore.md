@@ -1,5 +1,5 @@
 ---
-title: GetMore
+title: getMore
 description: The getMore command is used to retrieve extra batches of documents from an existing cursor.
 type: commands
 category: query-and-write
@@ -13,7 +13,7 @@ The `getMore` command is used to retrieve extra batches of documents from an exi
 
 The syntax for the `getMore` command is as follows:
 
-```
+```javascript
 {
    getMore: <cursor-id>,
    collection: <collection-name>,
@@ -43,7 +43,7 @@ Assume you have a cursor with the ID `1234567890` from the `stores` collection. 
 
 If you don't specify the `batchSize`, the server uses the default batch size:
 
-```json
+```javascript
 {
    getMore: 1234567890,
    collection: "stores"

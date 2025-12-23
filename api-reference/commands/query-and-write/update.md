@@ -127,7 +127,7 @@ Consider this sample document from the stores collection in the StoreData databa
 
 Increment the totalSales by 10 and decrement the number of full time staff for a document with the specified _id.
 
-```mongodb
+```javascript
 db.stores.updateOne({"_id": "0fcc0bf0-ed18-4ab8-b558-9848e18058f4"}, {"$inc": {"sales.salesByCategory.0.totalSales": 10, "staff.totalStaff.fullTime": -6}})
 ```
 
@@ -135,7 +135,7 @@ db.stores.updateOne({"_id": "0fcc0bf0-ed18-4ab8-b558-9848e18058f4"}, {"$inc": {"
 
 Update the totalStaff count for the document with the specified _id to 10 if the current value of the field is greater than 10.
 
-```mongodb
+```javascript
 db.stores.updateOne({"_id": "0fcc0bf0-ed18-4ab8-b558-9848e18058f4"}, {"$min": {"staff.totalStaff.fullTime": 10}})
 ```
 
@@ -143,7 +143,7 @@ db.stores.updateOne({"_id": "0fcc0bf0-ed18-4ab8-b558-9848e18058f4"}, {"$min": {"
 
 Update the totalStaff count for the document with the specified _id to 14 if the current value of the field is less than 14.
 
-```mongodb
+```javascript
 db.stores.updateOne({"_id": "0fcc0bf0-ed18-4ab8-b558-9848e18058f4"}, {"$max": {"staff.totalStaff.fullTime": 14}})
 ```
 
@@ -151,7 +151,7 @@ db.stores.updateOne({"_id": "0fcc0bf0-ed18-4ab8-b558-9848e18058f4"}, {"$max": {"
 
 Multiple the count of part time employees by 2 for the document with the specified _id value.
 
-```mongodb
+```javascript
 db.stores.updateOne({"_id": "0fcc0bf0-ed18-4ab8-b558-9848e18058f4"}, {"$mul": {"staff.totalStaff.partTime": 2}})
 ```
 
@@ -159,7 +159,7 @@ db.stores.updateOne({"_id": "0fcc0bf0-ed18-4ab8-b558-9848e18058f4"}, {"$mul": {"
 
 Rename the totalSales and totalStaff fields to fullSales and staffCounts respectively.
 
-```mongodb
+```javascript
 db.stores.updateOne({"_id": "0fcc0bf0-ed18-4ab8-b558-9848e18058f4"}, {"$rename": {"sales.totalSales": "sales.fullSales", "staff.totalStaff": "staff.staffCounts"}})
 ```
 
@@ -167,7 +167,7 @@ db.stores.updateOne({"_id": "0fcc0bf0-ed18-4ab8-b558-9848e18058f4"}, {"$rename":
 
 Set the fullSales field to 3700 for the document with the specified _id value.
 
-```mongodb
+```javascript
 db.stores.updateOne({"_id": "0fcc0bf0-ed18-4ab8-b558-9848e18058f4"}, {"$set": {"sales.fullSales": 3700}})
 ```
 
@@ -175,7 +175,7 @@ db.stores.updateOne({"_id": "0fcc0bf0-ed18-4ab8-b558-9848e18058f4"}, {"$set": {"
 
 Remove the lon field from the location object in the document with the specified _id value.
 
-```mongodb
+```javascript
 db.stores.updateOne({"_id": "0fcc0bf0-ed18-4ab8-b558-9848e18058f4"}, {"$unset": {"location.lon": ""}})
 ```
 
@@ -183,7 +183,7 @@ db.stores.updateOne({"_id": "0fcc0bf0-ed18-4ab8-b558-9848e18058f4"}, {"$unset": 
 
 Update all documents where the first promotional event starts in February to start in March.
 
-```mongodb
+```javascript
 db.stores.updateMany({"promotionEvents.0.promotionalDates.startDate.Month": 2}, {"$inc": {"promotionEvents.0.promotionalDates.startDate.Month": 1}})
 ```
 
@@ -191,7 +191,7 @@ db.stores.updateMany({"promotionEvents.0.promotionalDates.startDate.Month": 2}, 
 
 Set the upsert flag to true to create a new document if the document specified in the query filter does not exist in the collection.
 
-```mongodb
+```javascript
 db.stores.updateOne({"_id": "NonExistentDocId"}, {"$set": {"name": "Lakeshore Retail", "sales.totalSales": 0}}, {"upsert": true})
 ```
 

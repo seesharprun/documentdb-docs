@@ -13,7 +13,7 @@ The `find` command in DocumentDB is used to query documents within a collection.
 
 The basic syntax for the `find` command is:
 
-```
+```javascript
 db.collection.find(query, projection, options)
 ```
 
