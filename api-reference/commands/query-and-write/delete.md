@@ -148,25 +148,25 @@ Consider this sample document from the stores collection in the StoreData databa
 
 ### Example 1 - Delete all documents in a collection
 
-```mongodb
+```javascript
 db.stores.deleteMany({})
 ```
 
 ### Example 2 - Delete a document that matches a specified query filter
 
-```mongodb
+```javascript
 db.stores.deleteOne({"_id": "68471088-4d45-4164-ae58-a9428d12f310"})
 ```
 
 ### Example 3 - Delete all documents that match a specified query filter
 
-```mongodb
+```javascript
 db.stores.deleteMany({"promotionEvents.discounts.discountPercentage": 21}, {"limit": 0})
 ```
 
 ### Example 3 - Delete only one of many documents that match a specified query filter
 
-```mongodb
+```javascript
 db.stores.deleteMany({"promotionEvents.discounts.discountPercentage": 21}, {"limit": 1})
 ```
 

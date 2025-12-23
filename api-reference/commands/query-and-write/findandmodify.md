@@ -1,5 +1,5 @@
 ---
-title: FindAndModify
+title: findAndModify
 description: The findAndModify command is used to atomically modify and return a single document.
 type: commands
 category: query-and-write
