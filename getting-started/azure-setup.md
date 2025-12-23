@@ -1,6 +1,6 @@
 # Multi-cloud with Azure
 
-Deploy and manage DocumentDB on Micrtosoft Azure for a fully managed experience.
+Deploy and manage DocumentDB on Microsoft Azure for a fully managed experience.
 
 ## Azure Integration Options
 

@@ -6,7 +6,7 @@ Learn how to set up and use DocumentDB with Node.js using the official MongoDB N
 
 - Node.js 14.x or later
 - npm or yarn package manager
-- DocumentDB installed and running
+- DocumentDB installed and running (see [Pre-built Packages](prebuilt-packages.md))
 - Docker installed (if set up is not completed yet)
 - Basic Node.js knowledge
 
