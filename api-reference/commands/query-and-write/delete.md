@@ -13,7 +13,7 @@ The `delete` command is used to remove documents from a collection. A single doc
 
 The basic syntax for the `delete` command is as follows:
 
-```mongodb
+```javascript
 db.collection.deleteOne(
    <filter>,
    <options>

@@ -13,7 +13,7 @@ The `getMore` command is used to retrieve extra batches of documents from an exi
 
 The syntax for the `getMore` command is as follows:
 
-```
+```javascript
 {
    getMore: <cursor-id>,
    collection: <collection-name>,

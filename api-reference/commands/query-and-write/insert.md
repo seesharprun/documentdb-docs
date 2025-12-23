@@ -13,7 +13,7 @@ The `insert` command is used to create new documents into a collection. Either a
 
 The basic syntax of the insert command is:
 
-```
+```javascript
 db.collection.insert(
    <single document or array of documents>,
    {
