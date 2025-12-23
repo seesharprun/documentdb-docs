@@ -1,4 +1,4 @@
-# Multi-cloud with AWS DocumentDB
+# Multi-cloud with AWS
 
 Deploy and manage DocumentDB alongside AWS for a hybrid database strategy.
 

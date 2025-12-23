@@ -66,7 +66,7 @@ Choose the getting started guide that best fits your needs:
 - [Pre-built Packages](prebuilt-packages.md) - Download and install ready-to-use packages
 - [Multi-cloud with Azure](azure-setup.md) - Deploy on Azure with Cosmos DB integration
 - [Multi-cloud with GCP](gcp-setup.md) - Deploy on Google Cloud Platform
-- [Multi-cloud with AWS DocumentDB](aws-setup.md) - Deploy alongside AWS services
+- [Multi-cloud with AWS](aws-setup.md) - Deploy alongside AWS services
 - [Using with YugabyteDB](yugabyte-setup.md) - Combine with distributed SQL capabilities
 
 ## Community and Support
