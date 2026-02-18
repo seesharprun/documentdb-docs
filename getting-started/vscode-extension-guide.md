@@ -54,23 +54,34 @@ Use the command palette:
 
 1. **Start a local DocumentDB instance using Docker:**
 
+   **Bash**
+
    ```bash
    docker pull ghcr.io/documentdb/documentdb/documentdb-local:latest
    docker tag ghcr.io/documentdb/documentdb/documentdb-local:latest documentdb
    docker run -dt -p 10260:10260 --name documentdb-container documentdb --username admin --password password123
-   docker image rm -f ghcr.io/documentdb/documentdb/documentdb-local:latest
+   docker image rm -f ghcr.io/documentdb/documentdb/documentdb-local:latest || echo "No existing documentdb image to remove"
+   ```
+
+   **PowerShell**
+
+   ```powershell
+   docker pull ghcr.io/documentdb/documentdb/documentdb-local:latest
+   docker tag ghcr.io/documentdb/documentdb/documentdb-local:latest documentdb
+   docker run -dt -p 10260:10260 --name documentdb-container documentdb --username admin --password password123
+   docker image rm -f ghcr.io/documentdb/documentdb/documentdb-local:latest; if ($LASTEXITCODE -ne 0) { echo "No existing documentdb image to remove" }
    ```
 
    > **Note:** We're using port `10260` to avoid conflicts with other local database services. You can use port `27017` (the standard MongoDB port) if you prefer.
 
 2. **Connect to DocumentDB using the VS Code extension:**
-   - Open VS Code and click the DocumentDB icon in the sidebar
-   - Click "Add New Connection"
-   - Select "Connection String" and paste:
-     ```
-     mongodb://admin:password123@localhost:10260/?tls=true&tlsAllowInvalidCertificates=true&authMechanism=SCRAM-SHA-256
-     ```
-   - Click "Enter" when prompted for your username and password
+   - Locate and select the DocumentDB icon in the primary VS Code sidebar on the left-hand side.
+   - Add a new connection to your DocumentDB:
+     - In the DocumentDB Connections area, locate and expand the **DocumentDB Local** node.
+     - Select the **New Local Connection** option.
+     - Confirm the port (default value `10260`), username, password, and choose the **Disable TLS/SSL** option.
+     - **Note:** TLS/SSL can be enabled, but this walkthrough skips those steps for simplicity.
+     - A new DocumentDB Local entry will be added and listed in your DocumentDB Connections area.
 
 ## Core Features
 
